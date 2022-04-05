@@ -1,0 +1,33 @@
+<html lang="en">
+<head>
+    <link rel="stylesheet" type="text/css" href="./calculator.css" />
+</head>
+<body>
+    <div id="calculator">
+        <div class="calculator">
+            <form name="form1" id="buttons">
+                <input class="disp" id="display" type="text" name="answer" value="0" />
+                <input id="output" type="text" name="answer2" value="0" />
+                <input class="button" type="button" value="AC" onclick="form1.answer.value = '0', form1.answer2.value = '0'" id="clear" />
+                <input class="button" type="button" id="divide" value="/" onclick="form1.answer.value += '/', removeZero(form1.answer.value, this.id)" />
+                <input class="button" type="button" value="*" id="multiply" onclick="form1.answer.value += '*', removeZero(form1.answer.value, this.id)">
+                <input class="button" type="button" id="seven" value="7" onclick="form1.answer.value += '7', removeZero(form1.answer.value, this.id)">
+                <input class="button" type="button" id="eight" value="8" onclick="form1.answer.value += '8', removeZero(form1.answer.value, this.id)">
+                <input class="button" type="button" id="nine" value="9" onclick="form1.answer.value += '9', removeZero(form1.answer.value, this.id)">
+                <input class="button" type="button" id="subtract" value="-" onclick="form1.answer.value += '-', removeZero(form1.answer.value, this.id)">
+                <input class="button" type="button" id="four" value="4" onclick="form1.answer.value += '4', removeZero(form1.answer.value, this.id)">
+                <input class="button" type="button" id="five" value="5" onclick="form1.answer.value += '5', removeZero(form1.answer.value, this.id)">
+                <input class="button" type="button" id="six" value="6" onclick="form1.answer.value += '6', removeZero(form1.answer.value, this.id)">
+                <input class="button" type="button" id="add" value="+" onclick="form1.answer.value += '+', removeZero(form1.answer.value, this.id)">
+                <input class="button" type="button" id="one" value="1" onclick="form1.answer.value += '1', removeZero(form1.answer.value, this.id)">
+                <input class="button" type="button" id="two" value="2" onclick="form1.answer.value += '2' ,removeZero(form1.answer.value, this.id)">
+                <input class="button" type="button" id="three" value="3" onclick="form1.answer.value += '3', removeZero(form1.answer.value, this.id)">
+                <input class="button" type="button" id="zero" value="0" onclick="form1.answer.value += '0', removeZero(form1.answer.value, this.id), notAllowMultipleZeros(form1.answer.value)">
+                <input class="button" type="button" id="decimal" value="." onclick="form1.answer.value += '.', multipleDecimal(form1.answer.value)">
+                <input class="button" type="button" value="=" id="equals" onClick="evaal(form1.answer.value)">
+            </form>
+        </div>
+    </div>
+</body>
+</html>
+<script src="./calculator.js"></script>
